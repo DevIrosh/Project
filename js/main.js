@@ -1,3 +1,9 @@
+/* ============================================================
+   © 2026 ZyoraTech. All Rights Reserved.
+   Unauthorized copying or modification of this file is
+   strictly prohibited. Contact: zyoratech@gmail.com
+   ============================================================ */
+
 /* =============================================
    ZyoraTech — Main JavaScript
    ============================================= */
@@ -240,3 +246,18 @@ style.textContent = `
   }
 `;
 document.head.appendChild(style);
+
+// ===================== IMAGE PROTECTION =====================
+// Disable right-click on images to prevent easy saving
+document.querySelectorAll('img').forEach(img => {
+    img.addEventListener('contextmenu', e => e.preventDefault());
+    img.addEventListener('dragstart', e => e.preventDefault());
+});
+
+// Re-apply on dynamic content load
+window.addEventListener('load', () => {
+    document.querySelectorAll('img').forEach(img => {
+        img.addEventListener('contextmenu', e => e.preventDefault());
+        img.addEventListener('dragstart', e => e.preventDefault());
+    });
+});

@@ -1,3 +1,9 @@
+/* ============================================================
+   © 2026 ZyoraTech. All Rights Reserved.
+   Unauthorized copying or modification of this file is
+   strictly prohibited. Contact: zyoratech@gmail.com
+   ============================================================ */
+
 /* =============================================
    ZyoraTech — Main Stylesheet
    Colors: Cyan #00d4ff | Purple #7b2fff | Dark #0a0a0f
@@ -218,6 +224,16 @@ body {
     width: auto;
     display: block;
     object-fit: contain;
+    -webkit-user-drag: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+/* Global image protection */
+img {
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-touch-callout: none;
 }
 
 .brand-zyora { color: var(--cyan); }

@@ -1,0 +1,889 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="ZyoraTech - Professional Software Company specializing in Custom Software Development, Web & Mobile Apps, AI & Cloud Solutions, and IT Consulting.">
+    <title>ZyoraTech | Turning Ideas into Intelligent Solutions</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- AOS Animate on Scroll -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- ===================== NAVBAR ===================== -->
+    <nav class="navbar" id="navbar">
+        <div class="container">
+            <a href="#home" class="nav-brand">
+                <img src="images/Company%20Logo-4K%20.png" alt="ZyoraTech" class="nav-logo">
+                <span class="brand-zyora">Zyora</span><span class="brand-tech">Tech</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#why-us" class="nav-link">Why Us</a></li>
+                <li><a href="#portfolio" class="nav-link">Portfolio</a></li>
+                <li><a href="#team" class="nav-link">Team</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="#contact" class="btn btn-primary nav-cta">Get Started</a>
+            <button class="hamburger" id="hamburger" aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===================== HERO ===================== -->
+    <section class="hero" id="home">
+        <div class="hero-bg">
+            <div class="grid-lines"></div>
+            <div class="glow-orb orb-1"></div>
+            <div class="glow-orb orb-2"></div>
+            <div class="glow-orb orb-3"></div>
+        </div>
+        <div class="container">
+            <div class="hero-layout">
+                <div class="hero-content">
+                    <div class="hero-badge" data-aos="fade-down">
+                        <span class="badge-dot"></span>
+                        Available for new projects
+                    </div>
+                    <h1 class="hero-title" data-aos="fade-up" data-aos-delay="100">
+                        Turning Ideas into<br>
+                        <span class="gradient-text typing-text" id="typingText"></span>
+                    </h1>
+                    <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="200">
+                        ZyoraTech delivers cutting-edge software solutions — from custom development and mobile apps to AI integrations and cloud architecture. We build technology that drives your business forward.
+                    </p>
+                    <div class="hero-actions" data-aos="fade-up" data-aos-delay="300">
+                        <a href="#services" class="btn btn-primary">Explore Services <i class="fas fa-arrow-right"></i></a>
+                        <a href="#contact" class="btn btn-outline">Start a Project</a>
+                    </div>
+                    <div class="hero-stats" data-aos="fade-up" data-aos-delay="400">
+                        <div class="stat">
+                            <span class="stat-number" data-count="70">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Projects Delivered</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="60">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Happy Clients</span>
+                        </div>
+                        <div class="stat-divider"></div>
+                        <div class="stat">
+                            <span class="stat-number" data-count="5">0</span><span class="stat-plus">+</span>
+                            <span class="stat-label">Years Experience</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- HERO VISUAL -->
+                <div class="hero-visual" data-aos="fade-left" data-aos-delay="300">
+                    <!-- Monitor frame -->
+                    <div class="monitor">
+                        <div class="monitor-screen">
+                            <!-- Top bar -->
+                            <div class="screen-topbar">
+                                <span class="dot dot-red"></span>
+                                <span class="dot dot-yellow"></span>
+                                <span class="dot dot-green"></span>
+                                <span class="screen-title">zyoratech_app.js</span>
+                            </div>
+                            <!-- Code lines -->
+                            <div class="code-area">
+                                <div class="code-line cl-1"><span class="c-purple">import</span> <span class="c-cyan">{ ZyoraTech }</span> <span class="c-purple">from</span> <span class="c-green">'./core'</span>;</div>
+                                <div class="code-line cl-2"></div>
+                                <div class="code-line cl-3"><span class="c-purple">const</span> <span class="c-cyan">app</span> = <span class="c-purple">new</span> <span class="c-yellow">ZyoraTech</span>({</div>
+                                <div class="code-line cl-4"><span class="code-indent"></span><span class="c-cyan">mode</span>: <span class="c-green">'production'</span>,</div>
+                                <div class="code-line cl-5"><span class="code-indent"></span><span class="c-cyan">ai</span>: <span class="c-purple">true</span>,</div>
+                                <div class="code-line cl-6"><span class="code-indent"></span><span class="c-cyan">cloud</span>: <span class="c-green">'global'</span>,</div>
+                                <div class="code-line cl-7">});</div>
+                                <div class="code-line cl-8"></div>
+                                <div class="code-line cl-9"><span class="c-cyan">app</span>.<span class="c-yellow">launch</span>() <span class="c-muted">// ✓ Success</span></div>
+                                <div class="code-cursor"></div>
+                            </div>
+                        </div>
+                        <div class="monitor-stand"></div>
+                        <div class="monitor-base"></div>
+                    </div>
+                    <!-- Floating metric cards -->
+                    <div class="metric-card mc-1">
+                        <i class="fas fa-rocket"></i>
+                        <div>
+                            <strong>Build Deployed</strong>
+                            <span class="metric-green">● Live</span>
+                        </div>
+                    </div>
+                    <div class="metric-card mc-2">
+                        <i class="fas fa-shield-alt"></i>
+                        <div>
+                            <strong>Security Score</strong>
+                            <span>98 / 100</span>
+                        </div>
+                    </div>
+                    <div class="metric-card mc-3">
+                        <i class="fas fa-tachometer-alt"></i>
+                        <div>
+                            <strong>Performance</strong>
+                            <span class="metric-green">100ms</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-border-glow"></div>
+        <a href="#services" class="scroll-indicator" aria-label="Scroll down">
+            <div class="scroll-dot"></div>
+        </a>
+    </section>
+
+    <!-- ===================== SERVICES ===================== -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">What We Do</span>
+                <h2 class="section-title">Our <span class="gradient-text">Services</span></h2>
+                <p class="section-subtitle">We offer end-to-end technology solutions designed to help businesses thrive in the digital age.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card featured" data-aos="fade-up" data-aos-delay="100">
+                    <div class="featured-badge">Most Popular</div>
+                    <div class="service-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Custom Software Development</h3>
+                    <p>Tailor-made software solutions built specifically for your business needs. From enterprise systems to specialized tools — we engineer exactly what you need.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Enterprise Applications</li>
+                        <li><i class="fas fa-check-circle"></i> ERP & CRM Systems</li>
+                        <li><i class="fas fa-check-circle"></i> API Development & Integration</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Get Started <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card featured" data-aos="fade-up" data-aos-delay="200">
+                    <div class="featured-badge">Most Popular</div>
+                    <div class="service-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Web & Mobile Apps</h3>
+                    <p>Beautiful, high-performance web and mobile applications that engage users and deliver results. Built for iOS, Android, and all modern browsers.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Responsive Web Applications</li>
+                        <li><i class="fas fa-check-circle"></i> iOS & Android Apps</li>
+                        <li><i class="fas fa-check-circle"></i> Cross-platform Solutions</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Get Started <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-icon">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI & Cloud Solutions</h3>
+                    <p>Harness the power of artificial intelligence and cloud computing to automate processes, gain insights, and scale your business without limits.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> AI & Machine Learning</li>
+                        <li><i class="fas fa-check-circle"></i> Cloud Migration & Setup</li>
+                        <li><i class="fas fa-check-circle"></i> Data Analytics & Insights</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Get Started <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+                <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>IT Consulting</h3>
+                    <p>Strategic technology guidance to help your business make the right decisions. We analyze, plan, and provide expert recommendations for your digital transformation.</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check-circle"></i> Technology Strategy</li>
+                        <li><i class="fas fa-check-circle"></i> Digital Transformation</li>
+                        <li><i class="fas fa-check-circle"></i> System Architecture Review</li>
+                    </ul>
+                    <a href="#contact" class="service-link">Get Started <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== ABOUT ===================== -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-content" data-aos="fade-right">
+                    <span class="section-tag">About Us</span>
+                    <h2 class="section-title">We Are <span class="gradient-text">ZyoraTech</span></h2>
+                    <p class="about-lead">A next-generation software company built to deliver intelligent, scalable, and beautiful technology solutions to businesses worldwide.</p>
+                    <p class="about-text">At ZyoraTech, we believe that great software can transform any business. Our team of passionate engineers, designers, and consultants work together to bring your vision to life — with precision, creativity, and a relentless focus on quality.</p>
+                    <p class="about-text">From startups to enterprises, we help clients across the globe solve complex challenges with elegant technology solutions.</p>
+                    <div class="about-values">
+                        <div class="value-item" data-aos="fade-up" data-aos-delay="100">
+                            <div class="value-icon"><i class="fas fa-rocket"></i></div>
+                            <div>
+                                <h4>Innovation First</h4>
+                                <p>We embrace the latest technologies to give you a competitive edge.</p>
+                            </div>
+                        </div>
+                        <div class="value-item" data-aos="fade-up" data-aos-delay="200">
+                            <div class="value-icon"><i class="fas fa-shield-alt"></i></div>
+                            <div>
+                                <h4>Quality & Security</h4>
+                                <p>Every solution we build meets the highest global standards.</p>
+                            </div>
+                        </div>
+                        <div class="value-item" data-aos="fade-up" data-aos-delay="300">
+                            <div class="value-icon"><i class="fas fa-handshake"></i></div>
+                            <div>
+                                <h4>Client Partnership</h4>
+                                <p>We don't just build software — we build long-term partnerships.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-visual" data-aos="fade-left">
+                    <div class="about-card-stack">
+                        <div class="about-card card-1">
+                            <i class="fas fa-globe"></i>
+                            <span>Global Reach</span>
+                        </div>
+                        <div class="about-card card-2">
+                            <i class="fas fa-code-branch"></i>
+                            <span>Clean Code</span>
+                        </div>
+                        <div class="about-card card-3">
+                            <i class="fas fa-users"></i>
+                            <span>Expert Team</span>
+                        </div>
+                        <div class="about-center">
+                            <img src="images/Company%20Logo-4K%20.png" alt="ZyoraTech" class="about-logo-img">
+                            <p>ZyoraTech</p>
+                        </img>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== WHY US ===================== -->
+    <section class="why-us" id="why-us">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Why ZyoraTech</span>
+                <h2 class="section-title">Why Choose <span class="gradient-text">Us</span></h2>
+                <p class="section-subtitle">We combine technical excellence with deep business understanding to deliver solutions that truly make a difference.</p>
+            </div>
+            <div class="why-grid">
+                <div class="why-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="why-icon"><i class="fas fa-bolt"></i></div>
+                    <h3>Fast Delivery</h3>
+                    <p>We follow agile methodologies to deliver projects on time without compromising quality.</p>
+                </div>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="why-icon"><i class="fas fa-infinity"></i></div>
+                    <h3>Scalable Solutions</h3>
+                    <p>Every solution we build is designed to grow with your business — from 10 to 10 million users.</p>
+                </div>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="why-icon"><i class="fas fa-lock"></i></div>
+                    <h3>Security Focused</h3>
+                    <p>Security is built into every layer of our development process, not added as an afterthought.</p>
+                </div>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="250">
+                    <div class="why-icon"><i class="fas fa-headset"></i></div>
+                    <h3>24/7 Support</h3>
+                    <p>Our dedicated support team is always available to ensure your systems run smoothly.</p>
+                </div>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="why-icon"><i class="fas fa-tags"></i></div>
+                    <h3>Cost Effective</h3>
+                    <p>Premium quality solutions at competitive prices — maximum value for your investment.</p>
+                </div>
+                <div class="why-card" data-aos="fade-up" data-aos-delay="350">
+                    <div class="why-icon"><i class="fas fa-award"></i></div>
+                    <h3>Proven Excellence</h3>
+                    <p>A track record of successful projects and satisfied clients across multiple industries.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== INDUSTRIES ===================== -->
+    <section class="industries" id="industries">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Who We Serve</span>
+                <h2 class="section-title">Industries We <span class="gradient-text">Serve</span></h2>
+                <p class="section-subtitle">We bring deep domain expertise across a wide range of industries — delivering solutions that fit your specific challenges.</p>
+            </div>
+            <div class="industries-grid">
+                <div class="industry-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="industry-icon"><i class="fas fa-heartbeat"></i></div>
+                    <h3>Healthcare</h3>
+                    <p>Hospital systems, patient portals, telemedicine platforms, and health data management.</p>
+                </div>
+                <div class="industry-card" data-aos="fade-up" data-aos-delay="150">
+                    <div class="industry-icon"><i class="fas fa-university"></i></div>
+                    <h3>Finance & Banking</h3>
+                    <p>Secure banking apps, payment gateways, loan management, and fintech platforms.</p>
+                </div>
+                <div class="industry-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="industry-icon"><i class="fas fa-shopping-cart"></i></div>
+                    <h3>Retail & E-Commerce</h3>
+                    <p>Online stores, inventory systems, POS solutions, and customer loyalty platforms.</p>
+                </div>
+                <div class="industry-card" data-aos="fade-up" data-aos-delay="250">
+                    <div class="industry-icon"><i class="fas fa-graduation-cap"></i></div>
+                    <h3>Education</h3>
+                    <p>Learning management systems, virtual classrooms, and student tracking portals.</p>
+                </div>
+                <div class="industry-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="industry-icon"><i class="fas fa-truck"></i></div>
+                    <h3>Logistics</h3>
+                    <p>Fleet tracking, supply chain automation, warehouse management, and delivery systems.</p>
+                </div>
+                <div class="industry-card" data-aos="fade-up" data-aos-delay="350">
+                    <div class="industry-icon"><i class="fas fa-industry"></i></div>
+                    <h3>Manufacturing</h3>
+                    <p>ERP systems, production monitoring, quality control, and factory automation software.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== PORTFOLIO ===================== -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Our Work</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                <p class="section-subtitle">A glimpse of what we've built for our clients across various industries.</p>
+            </div>
+            <div class="portfolio-filter" data-aos="fade-up">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="custom">Custom Software</button>
+                <button class="filter-btn" data-filter="web-mobile">Web & Mobile</button>
+                <button class="filter-btn" data-filter="ai-cloud">AI & Cloud</button>
+                <button class="filter-btn" data-filter="consulting">Consulting</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-card" data-category="custom" data-aos="fade-up" data-aos-delay="100">
+                    <div class="portfolio-img">
+                        <div class="portfolio-placeholder pi-1">
+                            <i class="fas fa-hospital"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <a href="#contact" class="btn btn-sm">View Details</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Custom Software</span>
+                        <h3>HealthTrack System</h3>
+                        <p>A comprehensive hospital management system with patient records, appointments, and billing.</p>
+                    </div>
+                </div>
+                <div class="portfolio-card" data-category="web-mobile" data-aos="fade-up" data-aos-delay="200">
+                    <div class="portfolio-img">
+                        <div class="portfolio-placeholder pi-2">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <a href="#contact" class="btn btn-sm">View Details</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Web & Mobile App</span>
+                        <h3>ShopNow E-Commerce</h3>
+                        <p>A full-featured e-commerce platform with real-time inventory and mobile app for iOS & Android.</p>
+                    </div>
+                </div>
+                <div class="portfolio-card" data-category="ai-cloud" data-aos="fade-up" data-aos-delay="300">
+                    <div class="portfolio-img">
+                        <div class="portfolio-placeholder pi-3">
+                            <i class="fas fa-chart-line"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <a href="#contact" class="btn btn-sm">View Details</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">AI & Cloud</span>
+                        <h3>DataSight Analytics</h3>
+                        <p>AI-powered business analytics platform deployed on cloud with real-time dashboards and insights.</p>
+                    </div>
+                </div>
+                <div class="portfolio-card" data-category="custom" data-aos="fade-up" data-aos-delay="400">
+                    <div class="portfolio-img">
+                        <div class="portfolio-placeholder pi-4">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <a href="#contact" class="btn btn-sm">View Details</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Custom Software</span>
+                        <h3>LogiTrack Platform</h3>
+                        <p>End-to-end logistics management system with real-time tracking and automated reporting.</p>
+                    </div>
+                </div>
+                <div class="portfolio-card" data-category="web-mobile" data-aos="fade-up" data-aos-delay="500">
+                    <div class="portfolio-img">
+                        <div class="portfolio-placeholder pi-5">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <a href="#contact" class="btn btn-sm">View Details</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">Web App</span>
+                        <h3>EduLearn Portal</h3>
+                        <p>Online learning management system with live classes, assessments, and progress tracking.</p>
+                    </div>
+                </div>
+                <div class="portfolio-card" data-category="consulting" data-aos="fade-up" data-aos-delay="600">
+                    <div class="portfolio-img">
+                        <div class="portfolio-placeholder pi-6">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="portfolio-overlay">
+                            <a href="#contact" class="btn btn-sm">View Details</a>
+                        </div>
+                    </div>
+                    <div class="portfolio-info">
+                        <span class="portfolio-tag">IT Consulting</span>
+                        <h3>FinCore Digital Transformation</h3>
+                        <p>Complete digital transformation strategy and implementation for a financial services firm.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== TEAM ===================== -->
+    <section class="team" id="team">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Our People</span>
+                <h2 class="section-title">Meet the <span class="gradient-text">Team</span></h2>
+                <p class="section-subtitle">Talented professionals united by a passion for building exceptional technology.</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="team-avatar">
+                        <div class="avatar-placeholder ap-1">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="team-social">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Alex Johnson</h3>
+                        <span class="team-role">CEO & Lead Architect</span>
+                        <p>10+ years in software architecture and business strategy.</p>
+                    </div>
+                </div>
+                <div class="team-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="team-avatar">
+                        <div class="avatar-placeholder ap-2">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="team-social">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Sarah Chen</h3>
+                        <span class="team-role">Head of AI & Cloud</span>
+                        <p>AI researcher with expertise in machine learning and cloud infrastructure.</p>
+                    </div>
+                </div>
+                <div class="team-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="team-avatar">
+                        <div class="avatar-placeholder ap-3">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="team-social">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="Dribbble"><i class="fab fa-dribbble"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Marcus Lee</h3>
+                        <span class="team-role">Lead UI/UX Designer</span>
+                        <p>Award-winning designer crafting intuitive and beautiful digital experiences.</p>
+                    </div>
+                </div>
+                <div class="team-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="team-avatar">
+                        <div class="avatar-placeholder ap-4">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <div class="team-social">
+                            <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                            <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                    <div class="team-info">
+                        <h3>Priya Patel</h3>
+                        <span class="team-role">Mobile Dev Lead</span>
+                        <p>Specialist in cross-platform mobile development for iOS and Android.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== TECHNOLOGIES ===================== -->
+    <section class="technologies">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Our Stack</span>
+                <h2 class="section-title">Technologies We <span class="gradient-text">Use</span></h2>
+                <p class="section-subtitle">We work with industry-leading tools and frameworks to build robust, scalable solutions.</p>
+            </div>
+            <div class="tech-categories" data-aos="fade-up" data-aos-delay="100">
+                <div class="tech-category">
+                    <h4>Frontend</h4>
+                    <div class="tech-tags">
+                        <span class="tech-tag"><i class="fab fa-react"></i> React</span>
+                        <span class="tech-tag"><i class="fab fa-vuejs"></i> Vue.js</span>
+                        <span class="tech-tag">Next.js</span>
+                        <span class="tech-tag"><i class="fab fa-angular"></i> Angular</span>
+                        <span class="tech-tag">Tailwind CSS</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h4>Backend</h4>
+                    <div class="tech-tags">
+                        <span class="tech-tag"><i class="fab fa-node-js"></i> Node.js</span>
+                        <span class="tech-tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="tech-tag">Django</span>
+                        <span class="tech-tag"><i class="fab fa-java"></i> Java</span>
+                        <span class="tech-tag">.NET</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h4>Mobile</h4>
+                    <div class="tech-tags">
+                        <span class="tech-tag">Flutter</span>
+                        <span class="tech-tag">React Native</span>
+                        <span class="tech-tag"><i class="fab fa-swift"></i> Swift</span>
+                        <span class="tech-tag">Kotlin</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h4>Cloud & DevOps</h4>
+                    <div class="tech-tags">
+                        <span class="tech-tag"><i class="fab fa-aws"></i> AWS</span>
+                        <span class="tech-tag">Google Cloud</span>
+                        <span class="tech-tag"><i class="fab fa-docker"></i> Docker</span>
+                        <span class="tech-tag">Kubernetes</span>
+                        <span class="tech-tag">Azure</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h4>Database</h4>
+                    <div class="tech-tags">
+                        <span class="tech-tag">PostgreSQL</span>
+                        <span class="tech-tag">MongoDB</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Firebase</span>
+                        <span class="tech-tag">Redis</span>
+                    </div>
+                </div>
+                <div class="tech-category">
+                    <h4>AI & Data</h4>
+                    <div class="tech-tags">
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">PyTorch</span>
+                        <span class="tech-tag">OpenAI API</span>
+                        <span class="tech-tag">LangChain</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== TESTIMONIALS ===================== -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Client Feedback</span>
+                <h2 class="section-title">What Clients <span class="gradient-text">Say</span></h2>
+                <p class="section-subtitle">Don't just take our word for it — hear from the businesses we've helped succeed.</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        <span class="star-label">4.5 / 5</span>
+                    </div>
+                    <p>"ZyoraTech transformed our outdated system into a modern, cloud-based platform. The efficiency gains were real and measurable. Onboarding took a bit longer than expected, but the end result was well worth it."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JM</div>
+                        <div>
+                            <strong>James Mitchell</strong>
+                            <span>CEO, RetailCore Inc.</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card featured-testimonial" data-aos="fade-up" data-aos-delay="200">
+                    <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                        <span class="star-label">4.5 / 5</span>
+                    </div>
+                    <p>"The mobile app they built crossed 50,000 downloads in the first month. The team was professional and responsive throughout. Would genuinely recommend them — especially for product-focused startups."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AL</div>
+                        <div>
+                            <strong>Aisha Laurent</strong>
+                            <span>Founder, QuickServe</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+                    <div class="testimonial-stars">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        <span class="star-label">5.0 / 5</span>
+                    </div>
+                    <p>"Honest, knowledgeable, and straight to the point. Their IT consulting helped us avoid a very costly architecture mistake. This is the kind of partner every tech team needs early on."</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">RK</div>
+                        <div>
+                            <strong>Raj Kumar</strong>
+                            <span>CTO, DataFlow Systems</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== INSIGHTS ===================== -->
+    <section class="insights">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Knowledge Hub</span>
+                <h2 class="section-title">Latest <span class="gradient-text">Insights</span></h2>
+                <p class="section-subtitle">Thoughts, guides, and updates from the ZyoraTech team on software, technology, and innovation.</p>
+            </div>
+            <div class="insights-grid">
+                <div class="insight-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="insight-img ii-1">
+                        <span class="insight-category">AI & Cloud</span>
+                    </div>
+                    <div class="insight-body">
+                        <span class="insight-date"><i class="far fa-calendar"></i> February 18, 2026</span>
+                        <h3>How AI Is Reshaping Custom Software Development in 2026</h3>
+                        <p>Explore how generative AI and intelligent automation are changing the way software is designed, built, and maintained.</p>
+                        <a href="#" class="insight-link">Read Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="insight-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="insight-img ii-2">
+                        <span class="insight-category">Web & Mobile</span>
+                    </div>
+                    <div class="insight-body">
+                        <span class="insight-date"><i class="far fa-calendar"></i> January 30, 2026</span>
+                        <h3>5 Key Principles for Building Scalable Mobile Applications</h3>
+                        <p>From architecture decisions to performance optimization — what separates good mobile apps from great ones.</p>
+                        <a href="#" class="insight-link">Read Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="insight-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="insight-img ii-3">
+                        <span class="insight-category">IT Strategy</span>
+                    </div>
+                    <div class="insight-body">
+                        <span class="insight-date"><i class="far fa-calendar"></i> January 12, 2026</span>
+                        <h3>Digital Transformation: A Practical Roadmap for SMEs</h3>
+                        <p>A step-by-step guide to modernizing your business operations without disrupting day-to-day workflows.</p>
+                        <a href="#" class="insight-link">Read Article <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CAREERS ===================== -->
+    <section class="careers-banner">
+        <div class="container">
+            <div class="careers-content" data-aos="fade-up">
+                <div class="careers-text">
+                    <span class="section-tag">We Are Hiring</span>
+                    <h2>Can You Stack Up <span class="gradient-text">With the Best?</span></h2>
+                    <p>We're always looking for talented engineers, designers, and tech enthusiasts who want to build the future. Join a team that challenges you to grow every day.</p>
+                    <div class="careers-roles">
+                        <span class="role-badge"><i class="fas fa-code"></i> Full Stack Developer</span>
+                        <span class="role-badge"><i class="fas fa-mobile-alt"></i> Mobile Developer</span>
+                        <span class="role-badge"><i class="fas fa-brain"></i> AI Engineer</span>
+                        <span class="role-badge"><i class="fas fa-paint-brush"></i> UI/UX Designer</span>
+                    </div>
+                </div>
+                <div class="careers-cta">
+                    <a href="#contact" class="btn btn-primary btn-lg">View Open Positions <i class="fas fa-arrow-right"></i></a>
+                    <p class="careers-note"><i class="fas fa-globe"></i> Remote &amp; On-site roles available</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== CONTACT ===================== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Start Your <span class="gradient-text">Project</span></h2>
+                <p class="section-subtitle">Have a project in mind? We'd love to hear about it. Let's build something great together.</p>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>Email Us</h4>
+                            <p>zyoratech@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>Location</h4>
+                            <p>Colombo, Sri Lanka</p>
+                        </div>
+                    </div>
+                    <div class="contact-social">
+                        <a href="https://www.linkedin.com/company/zyoratech" target="_blank" rel="noopener" class="social-btn" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://web.facebook.com/profile.php?id=61584013215000" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/zyoratech/" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/ZyoraTech" target="_blank" rel="noopener" class="social-btn" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.tiktok.com/@zyoratech" target="_blank" rel="noopener" class="social-btn" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.youtube.com/@ZyoraTech" target="_blank" rel="noopener" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper" data-aos="fade-left">
+                    <form class="contact-form" id="contactForm" novalidate>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Your Name</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required autocomplete="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="john@company.com" required autocomplete="email">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service Interested In</label>
+                            <select id="service" name="service">
+                                <option value="">Select a service</option>
+                                <option value="custom-software">Custom Software Development</option>
+                                <option value="web-mobile">Web &amp; Mobile Apps</option>
+                                <option value="ai-cloud">AI &amp; Cloud Solutions</option>
+                                <option value="consulting">IT Consulting</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Project Details</label>
+                            <textarea id="message" name="message" placeholder="Tell us about your project..." rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            Send Message <i class="fas fa-paper-plane"></i>
+                        </button>
+                        <div class="form-success" id="formSuccess">
+                            <i class="fas fa-check-circle"></i> Thank you! We'll get back to you within 24 hours.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="nav-brand">
+                        <img src="images/Company%20Logo-4K%20.png" alt="ZyoraTech" class="footer-logo-img">
+                        <span class="brand-zyora">Zyora</span><span class="brand-tech">Tech</span>
+                    </a>
+                    <p>Engineering intelligent solutions for a better tomorrow. Your trusted technology partner, worldwide.</p>
+                    <div class="footer-social">
+                        <a href="https://www.linkedin.com/company/zyoratech" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://web.facebook.com/profile.php?id=61584013215000" target="_blank" rel="noopener" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/zyoratech/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://x.com/ZyoraTech" target="_blank" rel="noopener" aria-label="X (Twitter)"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.tiktok.com/@zyoratech" target="_blank" rel="noopener" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="https://www.youtube.com/@ZyoraTech" target="_blank" rel="noopener" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Custom Software</a></li>
+                        <li><a href="#services">Web &amp; Mobile Apps</a></li>
+                        <li><a href="#services">AI &amp; Cloud Solutions</a></li>
+                        <li><a href="#services">IT Consulting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#team">Our Team</a></li>
+                        <li><a href="#portfolio">Portfolio</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links">
+                    <h4>Connect</h4>
+                    <ul>
+                        <li><a href="#">LinkedIn</a></li>
+                        <li><a href="#">Twitter</a></li>
+                        <li><a href="#">GitHub</a></li>
+                        <li><a href="#">Instagram</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 ZyoraTech. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <!-- AOS Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+</body>
+</html>

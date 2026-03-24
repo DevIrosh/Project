@@ -226,9 +226,11 @@ if (contactForm) {
 // ===================== SMOOTH SCROLL FOR ALL ANCHORS =====================
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        const target = document.querySelector(this.getAttribute('href'));
+        e.preventDefault();
+        const href = this.getAttribute('href');
+        if (href === '#') return;
+        const target = document.querySelector(href);
         if (target) {
-            e.preventDefault();
             const offset = parseInt(getComputedStyle(document.documentElement)
                 .getPropertyValue('--nav-height')) || 70;
             const top = target.getBoundingClientRect().top + window.scrollY - offset;

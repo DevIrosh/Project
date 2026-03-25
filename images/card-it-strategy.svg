@@ -1,0 +1,127 @@
+<svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#050d12"/>
+      <stop offset="50%" style="stop-color:#0a2030"/>
+      <stop offset="100%" style="stop-color:#0d4060"/>
+    </linearGradient>
+    <linearGradient id="stepGrad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.15"/>
+      <stop offset="100%" style="stop-color:#00d4ff;stop-opacity:0.05"/>
+    </linearGradient>
+    <linearGradient id="chartGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#00d4ff;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#6c63ff;stop-opacity:0.4"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect width="600" height="200" fill="url(#bg)"/>
+
+  <!-- Subtle radial ambient -->
+  <circle cx="300" cy="100" r="180" fill="rgba(0,212,255,0.03)"/>
+
+  <!-- ===== LEFT: 6-step roadmap spine ===== -->
+  <!-- Spine line -->
+  <line x1="48" y1="20" x2="48" y2="182" stroke="rgba(0,212,255,0.25)" stroke-width="2" stroke-dasharray="5 4"/>
+
+  <!-- Step dots + labels -->
+  <circle cx="48" cy="28" r="9" fill="rgba(0,212,255,0.2)" stroke="#00d4ff" stroke-width="1.5" filter="url(#glow)"/>
+  <text x="48" y="32" font-size="7" fill="#00d4ff" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="bold">1</text>
+  <text x="65" y="32" font-size="8.5" fill="#a8b2c8" font-family="'Inter', sans-serif">Cloud &amp; shared data</text>
+
+  <circle cx="48" cy="58" r="9" fill="rgba(108,99,255,0.2)" stroke="#6c63ff" stroke-width="1.5"/>
+  <text x="48" y="62" font-size="7" fill="#6c63ff" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="bold">2</text>
+  <text x="65" y="62" font-size="8.5" fill="#a8b2c8" font-family="'Inter', sans-serif">Automate one process</text>
+
+  <circle cx="48" cy="88" r="9" fill="rgba(78,160,255,0.2)" stroke="#4ea0ff" stroke-width="1.5"/>
+  <text x="48" y="92" font-size="7" fill="#4ea0ff" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="bold">3</text>
+  <text x="65" y="92" font-size="8.5" fill="#a8b2c8" font-family="'Inter', sans-serif">Connect existing systems</text>
+
+  <circle cx="48" cy="118" r="9" fill="rgba(255,215,128,0.15)" stroke="#ffd580" stroke-width="1.5"/>
+  <text x="48" y="122" font-size="7" fill="#ffd580" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="bold">4</text>
+  <text x="65" y="122" font-size="8.5" fill="#a8b2c8" font-family="'Inter', sans-serif">Digital customer channel</text>
+
+  <circle cx="48" cy="148" r="9" fill="rgba(40,200,64,0.15)" stroke="#28c840" stroke-width="1.5"/>
+  <text x="48" y="152" font-size="7" fill="#28c840" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="bold">5</text>
+  <text x="65" y="152" font-size="8.5" fill="#a8b2c8" font-family="'Inter', sans-serif">Real-time data visibility</text>
+
+  <circle cx="48" cy="178" r="10" fill="rgba(108,99,255,0.3)" stroke="#6c63ff" stroke-width="2" filter="url(#glow)"/>
+  <text x="48" y="182" font-size="7" fill="#fff" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="bold">6</text>
+  <text x="65" y="182" font-size="8.5" fill="#a8b2c8" font-family="'Inter', sans-serif">AI on solid foundation</text>
+
+  <!-- ===== CENTRE: Live dashboard mini ===== -->
+  <rect x="210" y="16" width="170" height="168" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)" stroke-width="1"/>
+  <!-- Header -->
+  <rect x="210" y="16" width="170" height="28" rx="10" fill="rgba(0,212,255,0.12)"/>
+  <rect x="210" y="32" width="170" height="12" fill="rgba(0,212,255,0.12)"/>
+  <text x="295" y="34" font-size="9" fill="#fff" text-anchor="middle" font-family="'Inter', sans-serif" font-weight="600">Business Dashboard</text>
+
+  <!-- Metric tiles -->
+  <rect x="218" y="52" width="70" height="38" rx="6" fill="rgba(0,212,255,0.08)" stroke="rgba(0,212,255,0.2)" stroke-width="0.8"/>
+  <text x="253" y="68" font-size="9.5" fill="#00d4ff" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="700">LKR 2.4M</text>
+  <text x="253" y="80" font-size="6.5" fill="#6b7a99" text-anchor="middle" font-family="'Inter', sans-serif">Revenue MTD</text>
+  <text x="253" y="88" font-size="6" fill="#28c840" text-anchor="middle">▲ 18%</text>
+
+  <rect x="302" y="52" width="70" height="38" rx="6" fill="rgba(108,99,255,0.08)" stroke="rgba(108,99,255,0.2)" stroke-width="0.8"/>
+  <text x="337" y="68" font-size="9.5" fill="#6c63ff" text-anchor="middle" font-family="'Space Grotesk', sans-serif" font-weight="700">94%</text>
+  <text x="337" y="80" font-size="6.5" fill="#6b7a99" text-anchor="middle" font-family="'Inter', sans-serif">On-Time Orders</text>
+  <text x="337" y="88" font-size="6" fill="#28c840" text-anchor="middle">▲ from 71%</text>
+
+  <!-- Bar chart -->
+  <rect x="218" y="98" width="154" height="56" rx="6" fill="rgba(255,255,255,0.02)" stroke="rgba(255,255,255,0.04)" stroke-width="0.8"/>
+  <text x="225" y="110" font-size="6.5" fill="#6b7a99" font-family="'Inter', sans-serif">Weekly Sales</text>
+  <!-- bars -->
+  <rect x="225" y="140" width="10" height="10" rx="1.5" fill="#6c63ff" opacity="0.55"/>
+  <rect x="239" y="134" width="10" height="16" rx="1.5" fill="#6c63ff" opacity="0.7"/>
+  <rect x="253" y="126" width="10" height="24" rx="1.5" fill="#6c63ff" opacity="0.85"/>
+  <rect x="267" y="130" width="10" height="20" rx="1.5" fill="#6c63ff" opacity="0.75"/>
+  <rect x="281" y="122" width="10" height="28" rx="1.5" fill="#00d4ff"/>
+  <rect x="295" y="118" width="10" height="32" rx="1.5" fill="#00d4ff" filter="url(#glow)"/>
+  <rect x="309" y="120" width="10" height="30" rx="1.5" fill="#6c63ff" opacity="0.9"/>
+  <rect x="323" y="116" width="10" height="34" rx="1.5" fill="#00d4ff" opacity="0.85"/>
+  <rect x="337" y="119" width="10" height="31" rx="1.5" fill="#6c63ff"/>
+  <rect x="351" y="115" width="10" height="35" rx="1.5" fill="#00d4ff" filter="url(#glow)"/>
+
+  <!-- Live badge -->
+  <rect x="218" y="160" width="154" height="16" rx="5" fill="rgba(40,200,64,0.06)" stroke="rgba(40,200,64,0.15)" stroke-width="0.8"/>
+  <circle cx="228" cy="168" r="3" fill="#28c840" filter="url(#glow)"/>
+  <text x="237" y="172" font-size="7" fill="#28c840" font-family="'Inter', sans-serif">Live · updated 2s ago</text>
+
+  <!-- ===== RIGHT: Before/After comparison ===== -->
+  <g font-family="'Inter', sans-serif">
+    <!-- BEFORE column -->
+    <text x="410" y="28" font-size="7.5" fill="#6b7a99" letter-spacing="1" font-weight="600">BEFORE</text>
+    <rect x="400" y="36" width="80" height="20" rx="5" fill="rgba(255,95,87,0.08)" stroke="rgba(255,95,87,0.2)" stroke-width="0.8"/>
+    <text x="440" y="50" font-size="7.5" fill="#ff5f57" text-anchor="middle">WhatsApp threads</text>
+    <rect x="400" y="60" width="80" height="20" rx="5" fill="rgba(255,95,87,0.08)" stroke="rgba(255,95,87,0.2)" stroke-width="0.8"/>
+    <text x="440" y="74" font-size="7.5" fill="#ff5f57" text-anchor="middle">Manual spreadsheet</text>
+    <rect x="400" y="84" width="80" height="20" rx="5" fill="rgba(255,95,87,0.08)" stroke="rgba(255,95,87,0.2)" stroke-width="0.8"/>
+    <text x="440" y="98" font-size="7.5" fill="#ff5f57" text-anchor="middle">Paper invoices</text>
+    <rect x="400" y="108" width="80" height="20" rx="5" fill="rgba(255,95,87,0.08)" stroke="rgba(255,95,87,0.2)" stroke-width="0.8"/>
+    <text x="440" y="122" font-size="7.5" fill="#ff5f57" text-anchor="middle">Isolated systems</text>
+
+    <!-- Arrow -->
+    <line x1="488" y1="100" x2="504" y2="100" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+    <polygon points="502,96 510,100 502,104" fill="rgba(255,255,255,0.25)"/>
+
+    <!-- AFTER column -->
+    <text x="516" y="28" font-size="7.5" fill="#28c840" letter-spacing="1" font-weight="600">AFTER</text>
+    <rect x="514" y="36" width="72" height="20" rx="5" fill="rgba(40,200,64,0.08)" stroke="rgba(40,200,64,0.2)" stroke-width="0.8"/>
+    <text x="550" y="50" font-size="7.5" fill="#28c840" text-anchor="middle">Cloud workspace</text>
+    <rect x="514" y="60" width="72" height="20" rx="5" fill="rgba(40,200,64,0.08)" stroke="rgba(40,200,64,0.2)" stroke-width="0.8"/>
+    <text x="550" y="74" font-size="7.5" fill="#28c840" text-anchor="middle">Auto invoicing</text>
+    <rect x="514" y="84" width="72" height="20" rx="5" fill="rgba(40,200,64,0.08)" stroke="rgba(40,200,64,0.2)" stroke-width="0.8"/>
+    <text x="550" y="98" font-size="7.5" fill="#28c840" text-anchor="middle">Live dashboard</text>
+    <rect x="514" y="108" width="72" height="20" rx="5" fill="rgba(40,200,64,0.08)" stroke="rgba(40,200,64,0.2)" stroke-width="0.8"/>
+    <text x="550" y="122" font-size="7.5" fill="#28c840" text-anchor="middle">Integrated API</text>
+
+    <!-- Sri Lanka note -->
+    <rect x="400" y="142" width="186" height="30" rx="6" fill="rgba(0,212,255,0.06)" stroke="rgba(0,212,255,0.15)" stroke-width="0.8"/>
+    <text x="493" y="155" font-size="7.5" fill="#6b7a99" text-anchor="middle">Built for Sri Lanka businesses</text>
+    <text x="493" y="166" font-size="7" fill="#00d4ff" text-anchor="middle">Offline-ready · LKR payments · local support</text>
+  </g>
+</svg>

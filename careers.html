@@ -268,9 +268,11 @@
                 <h2>Send Your CV</h2>
                 <p class="cv-modal-subtitle">Fill in the details below and attach your CV. We'll review it and be in touch.</p>
 
-                <form id="cvForm" enctype="multipart/form-data">
+                <form id="cvForm" action="https://formsubmit.co/zyoratech@gmail.com" method="POST" enctype="multipart/form-data">
                     <input type="hidden" name="_subject" value="CV Submission — ZyoraTech Careers">
                     <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="https://www.zyoratech.com/careers.html?cv=sent">
+                    <input type="hidden" name="_captcha" value="false">
 
                     <div class="cv-field">
                         <label for="cvName">Full Name *</label>
@@ -383,28 +385,15 @@
             this.classList.remove('cv-placeholder');
         });
 
-        // CV form submission → Formsubmit.co (free, supports file attachments, delivers to Gmail)
-        document.getElementById('cvForm').addEventListener('submit', async function(e) {
-            e.preventDefault();
-            const btn = document.getElementById('cvSubmitBtn');
-            btn.disabled = true;
-            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
-            try {
-                const res = await fetch('https://formsubmit.co/ajax/zyoratech@gmail.com', {
-                    method: 'POST',
-                    body: new FormData(this),
-                    headers: { 'Accept': 'application/json' }
-                });
-                if (res.ok) {
-                    document.getElementById('cvFormWrap').style.display = 'none';
-                    document.getElementById('cvSuccess').style.display = 'block';
-                } else { throw new Error(); }
-            } catch {
-                btn.disabled = false;
-                btn.innerHTML = '<i class="fas fa-paper-plane"></i> Send My CV';
-                alert('Something went wrong. Please try again or email us directly at zyoratech@gmail.com');
-            }
-        });
+        // If redirected back after successful CV submission, open modal in success state
+        if (new URLSearchParams(window.location.search).get('cv') === 'sent') {
+            document.getElementById('cvModalOverlay').classList.add('open');
+            document.body.style.overflow = 'hidden';
+            document.getElementById('cvFormWrap').style.display = 'none';
+            document.getElementById('cvSuccess').style.display = 'block';
+            // Clean URL without reloading
+            history.replaceState(null, '', window.location.pathname);
+        }
     </script>
 
 </body>

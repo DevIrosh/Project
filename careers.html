@@ -6,6 +6,14 @@
     <meta name="robots" content="index, follow">
     <meta name="description" content="Careers at ZyoraTech — Join our team of passionate engineers, designers, and tech innovators. Explore opportunities at ZyoraTech.">
     <title>Careers | ZyoraTech</title>
+    <link rel="canonical" href="https://www.zyoratech.com/careers.html">
+    <meta property="og:title" content="Careers | ZyoraTech">
+    <meta property="og:description" content="Join our team of passionate engineers, designers, and tech innovators. Explore opportunities at ZyoraTech.">
+    <meta property="og:url" content="https://www.zyoratech.com/careers.html">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Careers | ZyoraTech">
+    <meta name="twitter:description" content="Join our team of passionate engineers, designers, and tech innovators. Explore opportunities at ZyoraTech.">
     <link rel="icon" type="image/png" href="images/Company%20Logo-4K%20.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,7 +59,7 @@
         .notify-form input:focus { border-color: var(--purple); }
         .btn-notify { background: var(--purple); color: #fff; border: none; border-radius: 8px; padding: 12px 20px; font-size: 0.9rem; font-weight: 600; font-family: 'Inter', sans-serif; cursor: pointer; white-space: nowrap; transition: background 0.2s, transform 0.1s; }
         .btn-notify:hover { background: var(--purple-light); transform: translateY(-1px); }
-        .notify-note { margin-top: 12px; font-size: 0.8rem; color: var(--text-muted); }
+        .no-openings-box .notify-note { margin-top: 12px; font-size: 0.8rem; color: var(--text-muted); }
         .notify-success { display: none; margin-top: 16px; color: #4ade80; font-size: 0.9rem; }
         .notify-success.show { display: block; }
 
@@ -230,6 +238,7 @@
             }).then(r => {
                 if (r.ok) {
                     document.getElementById('notifyForm').style.display = 'none';
+                    document.querySelector('.notify-note').style.display = 'none';
                     document.getElementById('notifySuccess').classList.add('show');
                 }
             }).catch(() => {

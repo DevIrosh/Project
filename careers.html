@@ -92,13 +92,30 @@
         .why-item h4 { font-family: 'Space Grotesk', sans-serif; font-size: 0.95rem; font-weight: 600; color: #fff; margin-bottom: 4px; }
         .why-item p { color: #a8b2c8; font-size: 0.82rem; }
 
-        /* CTA */
-        .cta-section { padding: 0 0 100px; text-align: center; }
-        .cta-box { background: linear-gradient(135deg, rgba(108,99,255,0.12), rgba(167,139,250,0.06)); border: 1px solid rgba(108,99,255,0.25); border-radius: 18px; padding: 56px 40px; }
-        .cta-box h2 { font-family: 'Space Grotesk', sans-serif; font-size: 1.8rem; font-weight: 700; color: #fff; margin-bottom: 12px; }
-        .cta-box p { color: #a8b2c8; max-width: 480px; margin: 0 auto 28px; }
-        .btn-primary { display: inline-flex; align-items: center; gap: 8px; background: var(--purple); color: #fff; padding: 14px 28px; border-radius: 8px; font-weight: 600; font-size: 0.97rem; text-decoration: none; transition: background 0.2s, transform 0.1s; }
-        .btn-primary:hover { background: var(--purple-light); transform: translateY(-2px); text-decoration: none; }
+        /* CV FORM */
+        .cta-section { padding: 0 0 100px; }
+        .cta-box { background: linear-gradient(135deg, rgba(108,99,255,0.12), rgba(167,139,250,0.06)); border: 1px solid rgba(108,99,255,0.25); border-radius: 18px; padding: 56px 48px; max-width: 680px; margin: 0 auto; }
+        .cta-box-header { text-align: center; margin-bottom: 36px; }
+        .cta-box-header h2 { font-family: 'Space Grotesk', sans-serif; font-size: 1.8rem; font-weight: 700; color: #fff; margin-bottom: 10px; }
+        .cta-box-header p { color: #a8b2c8; max-width: 460px; margin: 0 auto; }
+        .cv-form { display: flex; flex-direction: column; gap: 14px; }
+        .cv-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+        .cv-form input,
+        .cv-form select,
+        .cv-form textarea { width: 100%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 13px 16px; color: #fff; font-size: 0.9rem; font-family: 'Inter', sans-serif; outline: none; transition: border-color 0.2s; appearance: none; -webkit-appearance: none; resize: vertical; }
+        .cv-form input::placeholder,
+        .cv-form textarea::placeholder { color: var(--text-muted); }
+        .cv-form input:focus,
+        .cv-form select:focus,
+        .cv-form textarea:focus { border-color: var(--purple); }
+        .cv-form select option { background: #0d1220; color: #fff; }
+        .cv-form select.placeholder-selected { color: var(--text-muted); }
+        .cv-form textarea { min-height: 110px; }
+        .btn-cv-submit { width: 100%; background: var(--purple); color: #fff; border: none; border-radius: 8px; padding: 14px 20px; font-size: 1rem; font-weight: 600; font-family: 'Inter', sans-serif; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 8px; transition: background 0.2s, transform 0.1s; }
+        .btn-cv-submit:hover { background: var(--purple-light); transform: translateY(-1px); }
+        .btn-cv-submit:disabled { opacity: 0.6; cursor: not-allowed; transform: none; }
+        .cv-success { display: none; text-align: center; padding: 20px 0 0; color: #4ade80; font-size: 0.95rem; }
+        .cv-success.show { display: block; }
 
         /* FOOTER */
         .page-footer { border-top: 1px solid var(--border); padding: 28px 0; text-align: center; }
@@ -108,6 +125,7 @@
 
         @media (max-width: 600px) {
             .no-openings-box { padding: 40px 24px; }
+            .cv-form-row { grid-template-columns: 1fr; }
             .cta-box { padding: 40px 24px; }
         }
     </style>
@@ -223,13 +241,36 @@
         </div>
     </section>
 
-    <!-- CTA -->
+    <!-- CV SUBMISSION -->
     <section class="cta-section">
         <div class="container">
             <div class="cta-box">
-                <h2>Don't Wait for a Job Post</h2>
-                <p>If you're talented and driven, we'd love to hear from you — even if we're not actively hiring. Send us your CV and tell us what you bring to the table.</p>
-                <a href="index.html#contact" class="btn-primary">Send Your CV <i class="fas fa-arrow-right"></i></a>
+                <div class="cta-box-header">
+                    <h2>Don't Wait for a <span class="gradient-text">Job Post</span></h2>
+                    <p>Talented and driven? We'd love to hear from you — even if we're not actively hiring.</p>
+                </div>
+                <form class="cv-form" id="cvForm">
+                    <div class="cv-form-row">
+                        <input type="text" id="cvName" placeholder="Your full name" required autocomplete="name">
+                        <input type="email" id="cvEmail" placeholder="Your email address" required autocomplete="email">
+                    </div>
+                    <select id="cvPosition" class="placeholder-selected" required>
+                        <option value="" disabled selected>Position you're interested in</option>
+                        <option value="Full Stack Developer">Full Stack Developer</option>
+                        <option value="Mobile Developer">Mobile Developer</option>
+                        <option value="AI / ML Engineer">AI / ML Engineer</option>
+                        <option value="UI/UX Designer">UI/UX Designer</option>
+                        <option value="Other">Other / Open to any role</option>
+                    </select>
+                    <textarea id="cvMessage" placeholder="Tell us about yourself — your experience, skills, and what excites you about ZyoraTech" required></textarea>
+                    <button type="submit" class="btn-cv-submit" id="cvSubmitBtn">
+                        Send Your CV &amp; Introduction <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+                <div class="cv-success" id="cvSuccess">
+                    <i class="fas fa-check-circle" style="font-size:1.4rem; margin-bottom:8px; display:block;"></i>
+                    Thank you! We've received your message and will be in touch soon.
+                </div>
             </div>
         </div>
     </section>
@@ -241,6 +282,41 @@
     </footer>
 
     <script>
+        // CV submission form
+        document.getElementById('cvPosition').addEventListener('change', function() {
+            this.classList.remove('placeholder-selected');
+        });
+
+        document.getElementById('cvForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('cvName').value.trim();
+            const email = document.getElementById('cvEmail').value.trim();
+            const position = document.getElementById('cvPosition').value;
+            const message = document.getElementById('cvMessage').value.trim();
+            if (!name || !email || !position || !message) return;
+
+            const btn = document.getElementById('cvSubmitBtn');
+            btn.textContent = 'Sending...';
+            btn.disabled = true;
+
+            fetch('https://formspree.io/f/mqegzgjk', {
+                method: 'POST',
+                body: JSON.stringify({ name, email, position, message, type: 'CV Submission' }),
+                headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
+            }).then(r => {
+                if (r.ok) {
+                    document.getElementById('cvForm').style.display = 'none';
+                    document.getElementById('cvSuccess').classList.add('show');
+                } else {
+                    btn.textContent = 'Error — Try Again';
+                    btn.disabled = false;
+                }
+            }).catch(() => {
+                btn.textContent = 'Error — Try Again';
+                btn.disabled = false;
+            });
+        });
+
         // Remove muted colour once user picks a position
         document.getElementById('notifyPosition').addEventListener('change', function() {
             this.classList.remove('placeholder-selected');

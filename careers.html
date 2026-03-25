@@ -47,8 +47,32 @@
         /* CONTAINER */
         .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
 
+        /* NO OPENINGS */
+        .no-openings-section { padding: 60px 0 80px; }
+        .no-openings-box { background: var(--bg2); border: 1px solid var(--border); border-radius: 18px; max-width: 680px; margin: 0 auto; padding: 60px 48px; text-align: center; }
+        .no-openings-icon { width: 72px; height: 72px; background: rgba(108,99,255,0.1); border: 1px solid rgba(108,99,255,0.2); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin: 0 auto 24px; font-size: 1.8rem; color: var(--purple-light); }
+        .no-openings-box h2 { font-family: 'Space Grotesk', sans-serif; font-size: 1.5rem; font-weight: 600; color: #fff; margin-bottom: 12px; }
+        .no-openings-box > p { color: #a8b2c8; font-size: 0.97rem; max-width: 440px; margin: 0 auto 28px; }
+        .notify-form { display: flex; flex-direction: column; gap: 10px; max-width: 400px; margin: 0 auto; }
+        .notify-form input,
+        .notify-form select { width: 100%; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.12); border-radius: 8px; padding: 12px 16px; color: #fff; font-size: 0.9rem; font-family: 'Inter', sans-serif; outline: none; transition: border-color 0.2s; appearance: none; -webkit-appearance: none; }
+        .notify-form input::placeholder { color: var(--text-muted); }
+        .notify-form input:focus,
+        .notify-form select:focus { border-color: var(--purple); }
+        .notify-form select option { background: #0d1220; color: #fff; }
+        .notify-form select.placeholder-selected { color: var(--text-muted); }
+        .btn-notify { width: 100%; background: var(--purple); color: #fff; border: none; border-radius: 8px; padding: 13px 20px; font-size: 0.95rem; font-weight: 600; font-family: 'Inter', sans-serif; cursor: pointer; transition: background 0.2s, transform 0.1s; }
+        .btn-notify:hover { background: var(--purple-light); transform: translateY(-1px); }
+        .no-openings-box .notify-note { margin-top: 10px; font-size: 0.8rem; color: var(--text-muted); }
+        .notify-success { display: none; margin-top: 16px; color: #4ade80; font-size: 0.9rem; }
+        .notify-success.show { display: block; }
+        .btn-notify:hover { background: var(--purple-light); transform: translateY(-1px); }
+        .no-openings-box .notify-note { margin-top: 12px; font-size: 0.8rem; color: var(--text-muted); }
+        .notify-success { display: none; margin-top: 16px; color: #4ade80; font-size: 0.9rem; }
+        .notify-success.show { display: block; }
+
         /* ROLES WE LOOK FOR */
-        .roles-section { padding: 60px 0 80px; }
+        .roles-section { padding: 0 0 80px; }
         .section-header { text-align: center; margin-bottom: 48px; }
         .section-header h2 { font-family: 'Space Grotesk', sans-serif; font-size: 1.8rem; font-weight: 700; color: #fff; margin-bottom: 10px; }
         .section-header p { color: #a8b2c8; max-width: 500px; margin: 0 auto; }
@@ -84,7 +108,6 @@
 
         @media (max-width: 600px) {
             .no-openings-box { padding: 40px 24px; }
-            .notify-form { flex-direction: column; }
             .cta-box { padding: 40px 24px; }
         }
     </style>
@@ -104,6 +127,35 @@
             <span class="section-tag">Careers at ZyoraTech</span>
             <h1>Build the Future <span class="gradient-text">With Us</span></h1>
             <p>We're a team of passionate engineers, designers, and tech innovators on a mission to deliver world-class software solutions. Want to be part of it?</p>
+        </div>
+    </section>
+
+    <!-- NO OPENINGS -->
+    <section class="no-openings-section">
+        <div class="container">
+            <div class="no-openings-box">
+                <div class="no-openings-icon">
+                    <i class="fas fa-briefcase"></i>
+                </div>
+                <h2>No Open Positions Right Now</h2>
+                <p>We don't have any active job openings at the moment, but we're always growing. Leave your email and we'll notify you as soon as a role opens up.</p>
+                <form class="notify-form" id="notifyForm">
+                    <input type="email" id="notifyEmail" placeholder="Your email address" required autocomplete="email">
+                    <select id="notifyPosition" class="placeholder-selected" required>
+                        <option value="" disabled selected>Position you're hoping for</option>
+                        <option value="Full Stack Developer">Full Stack Developer</option>
+                        <option value="Mobile Developer">Mobile Developer</option>
+                        <option value="AI / ML Engineer">AI / ML Engineer</option>
+                        <option value="UI/UX Designer">UI/UX Designer</option>
+                        <option value="Other">Other / Open to any role</option>
+                    </select>
+                    <button type="submit" class="btn-notify">Notify Me When a Role Opens</button>
+                </form>
+                <p class="notify-note">No spam. Only real job openings — we promise.</p>
+                <div class="notify-success" id="notifySuccess">
+                    <i class="fas fa-check-circle"></i> Got it! We'll reach out when a role opens up.
+                </div>
+            </div>
         </div>
     </section>
 
@@ -188,7 +240,35 @@
         </div>
     </footer>
 
+    <script>
+        // Remove muted colour once user picks a position
+        document.getElementById('notifyPosition').addEventListener('change', function() {
+            this.classList.remove('placeholder-selected');
+        });
 
+        document.getElementById('notifyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = document.getElementById('notifyEmail').value.trim();
+            const position = document.getElementById('notifyPosition').value;
+            if (!email || !position) return;
+
+            fetch('https://formspree.io/f/mqegzgjk', {
+                method: 'POST',
+                body: JSON.stringify({ email: email, position: position, type: 'Career Notification Request' }),
+                headers: { 'Accept': 'application/json', 'Content-Type': 'application/json' }
+            }).then(r => {
+                if (r.ok) {
+                    document.getElementById('notifyForm').style.display = 'none';
+                    document.querySelector('.notify-note').style.display = 'none';
+                    document.getElementById('notifySuccess').classList.add('show');
+                }
+            }).catch(() => {
+                document.getElementById('notifySuccess').textContent = 'Something went wrong. Please try again.';
+                document.getElementById('notifySuccess').style.color = '#f87171';
+                document.getElementById('notifySuccess').classList.add('show');
+            });
+        });
+    </script>
 
 </body>
 </html>

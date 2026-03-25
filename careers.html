@@ -3,6 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     <meta name="robots" content="index, follow">
     <meta name="description" content="Careers at ZyoraTech — Join our team of passionate engineers, designers, and tech innovators. Explore opportunities at ZyoraTech.">
     <title>Careers | ZyoraTech</title>
@@ -18,7 +22,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous">
     <style>
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
         :root { --purple: #6c63ff; --purple-light: #8b85ff; --bg: #0a0e1a; --bg2: #0d1220; --text: #c8d0e0; --text-muted: #6b7a99; --border: rgba(255,255,255,0.07); }
@@ -142,7 +146,7 @@
     <nav class="navbar">
         <div class="inner">
             <a href="index.html" class="nav-brand"><span class="zyora">Zyora</span><span class="tech">Tech</span></a>
-            <a href="index.html" class="nav-back"><i class="fas fa-arrow-left"></i> Back to Website</a>
+            <a href="index.html" class="nav-back" rel="noopener noreferrer"><i class="fas fa-arrow-left"></i> Back to Website</a>
         </div>
     </nav>
 
@@ -272,7 +276,8 @@
                     <input type="hidden" name="_subject" value="CV Submission — ZyoraTech Careers">
                     <input type="hidden" name="_template" value="table">
                     <input type="hidden" name="_next" value="https://www.zyoratech.com/careers.html?cv=sent">
-                    <input type="hidden" name="_captcha" value="false">
+                    <!-- Honeypot: bots fill this, humans don't — auto-rejects bot submissions -->
+                    <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
                     <div class="cv-field">
                         <label for="cvName">Full Name *</label>
@@ -324,7 +329,7 @@
 
     <footer class="page-footer">
         <div class="container">
-            <p>&copy; 2026 ZyoraTech. All rights reserved. &nbsp;|&nbsp; <a href="privacy-policy.html">Privacy Policy</a> &nbsp;|&nbsp; <a href="terms.html">Terms of Service</a></p>
+            <p>&copy; 2026 ZyoraTech. All rights reserved. &nbsp;|&nbsp; <a href="privacy-policy.html" rel="noopener noreferrer">Privacy Policy</a> &nbsp;|&nbsp; <a href="terms.html" rel="noopener noreferrer">Terms of Service</a></p>
         </div>
     </footer>
 
@@ -365,12 +370,20 @@
         cvOverlay.addEventListener('click', function(e) { if (e.target === this) closeCvModal(); });
         document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeCvModal(); });
 
-        // Show selected file name + size check
+        // File validation: size + MIME type check
+        const ALLOWED_TYPES = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+        const ALLOWED_EXTS  = ['.pdf', '.doc', '.docx'];
         document.getElementById('cvFile').addEventListener('change', function() {
             const file = this.files[0];
             const nameEl = document.getElementById('cvFileName');
             if (!file) return;
-            if (file.size > 5 * 1024 * 1024) {
+            const ext = '.' + file.name.split('.').pop().toLowerCase();
+            const validType = ALLOWED_TYPES.includes(file.type) || (file.type === '' && ALLOWED_EXTS.includes(ext));
+            if (!validType) {
+                nameEl.textContent = '⚠ Invalid file type. Please upload a PDF, DOC, or DOCX.';
+                nameEl.style.color = '#f87171';
+                this.value = '';
+            } else if (file.size > 5 * 1024 * 1024) {
                 nameEl.textContent = '⚠ File too large — max 5MB.';
                 nameEl.style.color = '#f87171';
                 this.value = '';

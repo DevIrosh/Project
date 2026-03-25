@@ -205,21 +205,31 @@ if (contactForm) {
             return;
         }
 
-        // Simulate form submission (replace with real backend/EmailJS/Formspree)
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
 
-        setTimeout(() => {
-            formSuccess.classList.add('show');
-            contactForm.reset();
-            submitBtn.innerHTML = 'Send Message <i class="fas fa-paper-plane"></i>';
+        fetch('https://formspree.io/f/mqegzgjk', {
+            method: 'POST',
+            body: new FormData(contactForm),
+            headers: { 'Accept': 'application/json' }
+        })
+        .then(response => {
+            if (response.ok) {
+                formSuccess.classList.add('show');
+                contactForm.reset();
+                submitBtn.innerHTML = 'Send Message <i class="fas fa-paper-plane"></i>';
+                submitBtn.disabled = false;
+                setTimeout(() => formSuccess.classList.remove('show'), 5000);
+            } else {
+                submitBtn.innerHTML = 'Error — Try Again';
+                submitBtn.disabled = false;
+            }
+        })
+        .catch(() => {
+            submitBtn.innerHTML = 'Error — Try Again';
             submitBtn.disabled = false;
-
-            setTimeout(() => {
-                formSuccess.classList.remove('show');
-            }, 5000);
-        }, 1200);
+        });
     });
 }
 

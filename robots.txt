@@ -1,6 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /images/
 
-# © 2026 ZyoraTech. All Rights Reserved.
-# Sitemap: https://www.zyoratech.com/sitemap.xml
+Sitemap: https://www.zyoratech.com/sitemap.xml

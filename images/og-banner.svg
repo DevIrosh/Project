@@ -102,32 +102,16 @@
     <circle cx="960"  cy="563" r="1.8"/><circle cx="1060" cy="563" r="1.8"/><circle cx="1160" cy="563" r="1.8"/>
   </g>
 
-  <!-- ── LOGO MARK (92×92, precisely scaled from original 160×160 logo at 0.575×, offset 60,58) ── -->
-  <!-- Box background: diagonal grad, 0.15 opacity — matches original grad2 -->
-  <rect x="60" y="58" width="92" height="92" rx="18.5" fill="url(#logoBgGrad)"/>
-  <!-- Box border: diagonal grad at opacity 0.5 — matches original stroke usage -->
-  <rect x="60" y="58" width="92" height="92" rx="18.5" fill="none" stroke="url(#logoZGrad)" stroke-width="1.5" opacity="0.5"/>
-
-  <!-- Z TOP BAR: original x=36 y=36 w=88 h=16 rx=8 → scaled -->
-  <rect x="80.7" y="78.7" width="50.6" height="9.2" rx="4.6" fill="url(#logoZGrad)"/>
-
-  <!-- Z DIAGONAL: original x1=100 y1=52 x2=40 y2=108 sw=15 → scaled -->
-  <line x1="117.5" y1="87.9" x2="83.0" y2="120.1"
-        stroke="url(#logoZGrad)" stroke-width="8.6" stroke-linecap="round"/>
-
-  <!-- Z BOTTOM BAR: original x=36 y=108 w=88 h=16 rx=8 → scaled -->
-  <rect x="80.7" y="120.1" width="50.6" height="9.2" rx="4.6" fill="url(#logoZGrad)"/>
-
-  <!-- GLOW DOT: original cx=130 cy=30 r=8/r=12 → scaled -->
-  <circle cx="134.8" cy="75.3" r="4.6" fill="#00d4ff" opacity="0.8" filter="url(#nodeGlow)"/>
-  <circle cx="134.8" cy="75.3" r="6.9" fill="#00d4ff" opacity="0.15"/>
+  <!-- ── ACTUAL COMPANY LOGO (PNG embedded — exact brand asset from brand/ folder) ── -->
+  <image href="../brand/Company%20Logo-4K%20.png"
+         x="52" y="42" width="106" height="113"/>
 
   <!-- Company name beside logo -->
-  <text x="170" y="101"
+  <text x="174" y="97"
         font-family="'Space Grotesk', 'Inter', Arial, sans-serif"
         font-size="33" font-weight="700"
         fill="white" letter-spacing="-0.5">ZyoraTech</text>
-  <text x="171" y="128"
+  <text x="175" y="124"
         font-family="'Inter', Arial, sans-serif"
         font-size="13.5" font-weight="400"
         fill="rgba(255,255,255,0.42)" letter-spacing="2.5">CUSTOM SOFTWARE SOLUTIONS</text>

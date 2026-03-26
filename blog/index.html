@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<!-- ============================================================
+     © 2026 ZyoraTech. All Rights Reserved.
+     ============================================================ -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Insights, guides, and perspectives from the ZyoraTech team on software development, IT strategy, AI, and digital transformation.">
+
+    <!-- Security Headers -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta name="robots" content="index, follow">
+
+    <!-- Copyright -->
+    <meta name="author" content="ZyoraTech">
+    <meta name="copyright" content="© 2026 ZyoraTech. All Rights Reserved.">
+
+    <title>Insights & Articles | ZyoraTech</title>
+
+    <!-- Canonical -->
+    <link rel="canonical" href="https://www.zyoratech.com/blog/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../brand/Company%20Logo-4K%20.png">
+    <link rel="apple-touch-icon" href="../brand/Company%20Logo-4K%20.png">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.zyoratech.com/blog/">
+    <meta property="og:title" content="Insights & Articles | ZyoraTech">
+    <meta property="og:description" content="Insights, guides, and perspectives from the ZyoraTech team on software development, IT strategy, AI, and digital transformation.">
+    <meta property="og:image" content="https://www.zyoratech.com/images/blog-technology-roadmap.svg">
+    <meta property="og:site_name" content="ZyoraTech">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Insights & Articles | ZyoraTech">
+    <meta name="twitter:description" content="Guides, analysis, and perspectives from the ZyoraTech team.">
+    <meta name="twitter:image" content="https://www.zyoratech.com/images/blog-technology-roadmap.svg">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            background: #0a0a0f;
+            color: #c8d0e0;
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            line-height: 1.7;
+        }
+
+        a { color: #00d4ff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        /* ---- Topbar ---- */
+        .topbar {
+            background: #0d1220;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+            padding: 18px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .topbar-brand {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 700;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .topbar-brand:hover { text-decoration: none; }
+        .topbar-brand span:first-of-type { color: #00d4ff; }
+        .topbar-brand span:last-of-type { color: #fff; }
+        .topbar-logo { height: 38px; width: auto; }
+        .topbar-back { color: #c8d0e0; font-size: 0.875rem; opacity: 0.65; transition: opacity 0.2s; }
+        .topbar-back:hover { opacity: 1; text-decoration: none; }
+
+        /* ---- Page wrap ---- */
+        .page-wrap { max-width: 1100px; margin: 0 auto; padding: 64px 24px 100px; }
+
+        /* ---- Page header ---- */
+        .page-header {
+            text-align: center;
+            margin-bottom: 56px;
+        }
+        .page-tag {
+            display: inline-block;
+            background: rgba(0, 212, 255, 0.1);
+            color: #00d4ff;
+            font-size: 0.72rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 5px 14px;
+            border-radius: 100px;
+            margin-bottom: 18px;
+        }
+        .page-header h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: clamp(2rem, 5vw, 3rem);
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.2;
+            margin-bottom: 14px;
+        }
+        .page-header h1 span {
+            background: linear-gradient(135deg, #00d4ff, #7b2fff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .page-header p {
+            font-size: 1rem;
+            color: #6b7a99;
+            max-width: 540px;
+            margin: 0 auto;
+        }
+
+        /* ---- Article count badge ---- */
+        .article-count {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 0.8rem;
+            color: #6b7a99;
+            margin-bottom: 28px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(255,255,255,0.07);
+        }
+
+        /* ---- Articles grid ---- */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        /* ---- Cards ---- */
+        .insight-card {
+            background: #141428;
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 20px;
+            overflow: hidden;
+            transition: border-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .insight-card:hover {
+            border-color: rgba(0,212,255,0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 8px 40px rgba(0,212,255,0.08);
+        }
+
+        .insight-img {
+            height: 180px;
+            display: flex;
+            align-items: flex-end;
+            padding: 16px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        /* Card backgrounds — same images/gradients as homepage */
+        .ii-1 {
+            background: linear-gradient(135deg, #050d1a 0%, #0a1f3d 50%, #0d3a6e 100%);
+            background-image: url('../images/card-ai-cloud.svg'), linear-gradient(135deg, #050d1a 0%, #0a1f3d 50%, #0d3a6e 100%);
+            background-size: cover;
+            background-position: center;
+        }
+        .ii-2 {
+            background: linear-gradient(135deg, #0d0520 0%, #1a0a3d 50%, #2d1070 100%);
+            background-image: url('../images/card-web-mobile.svg'), linear-gradient(135deg, #0d0520 0%, #1a0a3d 50%, #2d1070 100%);
+            background-size: cover;
+            background-position: center;
+        }
+        .ii-3 {
+            background: linear-gradient(135deg, #050d12 0%, #0a2030 50%, #0d4060 100%);
+            background-image: url('../images/card-it-strategy.svg'), linear-gradient(135deg, #050d12 0%, #0a2030 50%, #0d4060 100%);
+            background-size: cover;
+            background-position: center;
+        }
+        .ii-4 {
+            background: linear-gradient(135deg, #030d09 0%, #061a0f 50%, #0a3018 100%);
+            background-image: url('../images/card-technology-roadmap.svg'), linear-gradient(135deg, #030d09 0%, #061a0f 50%, #0a3018 100%);
+            background-size: cover;
+            background-position: center;
+        }
+
+        .insight-category {
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: #000;
+            background: linear-gradient(135deg, #00d4ff, #7b2fff);
+            padding: 4px 12px;
+            border-radius: 100px;
+        }
+
+        .insight-body { padding: 24px; }
+
+        .insight-date {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.75rem;
+            color: #6b7a99;
+            margin-bottom: 12px;
+        }
+
+        .insight-body h3 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #fff;
+            line-height: 1.4;
+            margin-bottom: 10px;
+        }
+
+        .insight-body p {
+            font-size: 0.85rem;
+            color: #8b96b5;
+            line-height: 1.7;
+            margin-bottom: 18px;
+        }
+
+        .insight-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #00d4ff;
+            text-decoration: none;
+            font-family: 'Space Grotesk', sans-serif;
+            transition: gap 0.3s ease;
+        }
+        .insight-link:hover { gap: 10px; text-decoration: none; }
+
+        /* ---- Responsive ---- */
+        @media (max-width: 768px) {
+            .topbar { padding: 14px 20px; }
+            .page-wrap { padding: 40px 18px 80px; }
+            .articles-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Topbar -->
+    <div class="topbar">
+        <a href="../index.html" class="topbar-brand">
+            <img src="../brand/Company%20Logo-4K%20.png" alt="ZyoraTech" class="topbar-logo">
+            <span>Zyora</span><span>Tech</span>
+        </a>
+        <a href="../index.html" class="topbar-back">&#8592; Back to Home</a>
+    </div>
+
+    <main class="page-wrap">
+
+        <!-- Page header -->
+        <header class="page-header">
+            <div class="page-tag">Knowledge Hub</div>
+            <h1>All <span>Insights</span></h1>
+            <p>Guides, analysis, and perspectives from the ZyoraTech team on software, strategy, and technology.</p>
+        </header>
+
+        <p class="article-count">4 articles</p>
+
+        <!-- All articles -->
+        <div class="articles-grid">
+
+            <!-- March 2026 -->
+            <div class="insight-card">
+                <div class="insight-img ii-4">
+                    <span class="insight-category">IT Strategy</span>
+                </div>
+                <div class="insight-body">
+                    <span class="insight-date">&#128197; March 20, 2026</span>
+                    <h3>Why Your Business Needs a Technology Roadmap (And How to Build One)</h3>
+                    <p>Most businesses make technology decisions reactively. A practical framework for building a plan that aligns technology to where your business is going.</p>
+                    <a href="technology-roadmap-2026.html" class="insight-link">Read Article &#8594;</a>
+                </div>
+            </div>
+
+            <!-- February 2026 -->
+            <div class="insight-card">
+                <div class="insight-img ii-1">
+                    <span class="insight-category">AI &amp; Cloud</span>
+                </div>
+                <div class="insight-body">
+                    <span class="insight-date">&#128197; February 18, 2026</span>
+                    <h3>How AI Is Reshaping Custom Software Development in 2026</h3>
+                    <p>Explore how generative AI and intelligent automation are changing the way software is designed, built, and maintained.</p>
+                    <a href="ai-reshaping-software-2026.html" class="insight-link">Read Article &#8594;</a>
+                </div>
+            </div>
+
+            <!-- January 30, 2026 -->
+            <div class="insight-card">
+                <div class="insight-img ii-2">
+                    <span class="insight-category">Web &amp; Mobile</span>
+                </div>
+                <div class="insight-body">
+                    <span class="insight-date">&#128197; January 30, 2026</span>
+                    <h3>5 Key Principles for Building Scalable Mobile Applications</h3>
+                    <p>From architecture decisions to performance optimisation — what separates good mobile apps from great ones.</p>
+                    <a href="scalable-mobile-apps.html" class="insight-link">Read Article &#8594;</a>
+                </div>
+            </div>
+
+            <!-- January 12, 2026 -->
+            <div class="insight-card">
+                <div class="insight-img ii-3">
+                    <span class="insight-category">IT Strategy</span>
+                </div>
+                <div class="insight-body">
+                    <span class="insight-date">&#128197; January 12, 2026</span>
+                    <h3>Digital Transformation: A Practical Roadmap for SMEs</h3>
+                    <p>A practical, step-by-step digital transformation guide for small and medium enterprises — modernise your operations without disrupting daily workflows.</p>
+                    <a href="digital-transformation-smes.html" class="insight-link">Read Article &#8594;</a>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+</body>
+</html>

@@ -86,4 +86,6 @@
   <!-- Glow orb centre-left -->
   <circle cx="340" cy="100" r="50" fill="rgba(0,212,255,0.04)"/>
   <circle cx="160" cy="100" r="40" fill="rgba(108,99,255,0.05)"/>
+  <!-- Watermark -->
+  <text x="590" y="194" font-family="sans-serif" font-size="8" fill="#ffffff" opacity="0.18" text-anchor="end">© ZyoraTech</text>
 </svg>

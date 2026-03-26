@@ -1,0 +1,39 @@
+<svg viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#030d09"/>
+      <stop offset="50%" style="stop-color:#061a0f"/>
+      <stop offset="100%" style="stop-color:#0a3018"/>
+    </linearGradient>
+    <linearGradient id="path4" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00c853;stop-opacity:0.5"/>
+      <stop offset="100%" style="stop-color:#00e5ff;stop-opacity:0.5"/>
+    </linearGradient>
+  </defs>
+  <rect width="600" height="200" fill="url(#bg4)"/>
+  <!-- subtle grid -->
+  <g opacity="0.05" fill="#00e5ff">
+    <circle cx="80" cy="40" r="1.5"/><circle cx="180" cy="40" r="1.5"/><circle cx="280" cy="40" r="1.5"/><circle cx="380" cy="40" r="1.5"/><circle cx="480" cy="40" r="1.5"/><circle cx="560" cy="40" r="1.5"/>
+    <circle cx="80" cy="100" r="1.5"/><circle cx="180" cy="100" r="1.5"/><circle cx="280" cy="100" r="1.5"/><circle cx="380" cy="100" r="1.5"/><circle cx="480" cy="100" r="1.5"/><circle cx="560" cy="100" r="1.5"/>
+    <circle cx="80" cy="160" r="1.5"/><circle cx="180" cy="160" r="1.5"/><circle cx="280" cy="160" r="1.5"/><circle cx="380" cy="160" r="1.5"/><circle cx="480" cy="160" r="1.5"/><circle cx="560" cy="160" r="1.5"/>
+  </g>
+  <!-- roadmap path -->
+  <polyline points="60,155 160,115 270,125 370,72 470,85 545,45" stroke="url(#path4)" stroke-width="2.5" fill="none" stroke-dasharray="7,4"/>
+  <!-- milestone nodes -->
+  <circle cx="60" cy="155" r="5" fill="#00c853" opacity="0.75"/>
+  <circle cx="160" cy="115" r="5" fill="#00c853" opacity="0.75"/>
+  <circle cx="270" cy="125" r="5" fill="#00d4af" opacity="0.75"/>
+  <circle cx="370" cy="72" r="7" fill="#00e5ff" opacity="0.85"/>
+  <circle cx="470" cy="85" r="5" fill="#00e5ff" opacity="0.75"/>
+  <circle cx="545" cy="45" r="7" fill="#00e5ff" opacity="0.9"/>
+  <!-- glow rings on key nodes -->
+  <circle cx="370" cy="72" r="15" fill="none" stroke="#00e5ff" stroke-width="1" opacity="0.2"/>
+  <circle cx="545" cy="45" r="15" fill="none" stroke="#00e5ff" stroke-width="1" opacity="0.25"/>
+  <!-- step labels -->
+  <text x="60" y="173" font-family="sans-serif" font-size="8" fill="#00c853" opacity="0.65" text-anchor="middle">Audit</text>
+  <text x="160" y="133" font-family="sans-serif" font-size="8" fill="#00c853" opacity="0.65" text-anchor="middle">Align</text>
+  <text x="270" y="143" font-family="sans-serif" font-size="8" fill="#00d4af" opacity="0.65" text-anchor="middle">Design</text>
+  <text x="370" y="60" font-family="sans-serif" font-size="8" fill="#00e5ff" opacity="0.75" text-anchor="middle">Build</text>
+  <text x="470" y="103" font-family="sans-serif" font-size="8" fill="#00e5ff" opacity="0.65" text-anchor="middle">Deploy</text>
+  <text x="545" y="33" font-family="sans-serif" font-size="8" fill="#00e5ff" opacity="0.85" text-anchor="middle">Scale</text>
+</svg>

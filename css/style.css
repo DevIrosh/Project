@@ -2077,6 +2077,7 @@ img {
 .ii-1 { background: linear-gradient(135deg, #050d1a 0%, #0a1f3d 50%, #0d3a6e 100%); background-image: url('../images/card-ai-cloud.svg'), linear-gradient(135deg, #050d1a 0%, #0a1f3d 50%, #0d3a6e 100%); background-size: cover; background-position: center; }
 .ii-2 { background: linear-gradient(135deg, #0d0520 0%, #1a0a3d 50%, #2d1070 100%); background-image: url('../images/card-web-mobile.svg'), linear-gradient(135deg, #0d0520 0%, #1a0a3d 50%, #2d1070 100%); background-size: cover; background-position: center; }
 .ii-3 { background: linear-gradient(135deg, #050d12 0%, #0a2030 50%, #0d4060 100%); background-image: url('../images/card-it-strategy.svg'), linear-gradient(135deg, #050d12 0%, #0a2030 50%, #0d4060 100%); background-size: cover; background-position: center; }
+.ii-4 { background: linear-gradient(135deg, #030d09 0%, #061a0f 50%, #0a3018 100%); background-image: url('../images/card-technology-roadmap.svg'), linear-gradient(135deg, #030d09 0%, #061a0f 50%, #0a3018 100%); background-size: cover; background-position: center; }
 
 .insight-category {
     font-size: 0.7rem;

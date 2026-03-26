@@ -301,6 +301,76 @@ document.querySelectorAll('.faq-question').forEach(btn => {
     });
 });
 
+// ===================== INSIGHTS SLIDER =====================
+(function () {
+    const track = document.getElementById('insightsTrack');
+    if (!track) return;
+    const cards = Array.from(track.querySelectorAll('.insight-card'));
+    const total = cards.length;
+    const dotsContainer = document.getElementById('insightsDots');
+    const prevBtn = document.getElementById('insightsPrev');
+    const nextBtn = document.getElementById('insightsNext');
+    let current = 0;
+    let dots = [];
+
+    function perView() {
+        const w = window.innerWidth;
+        return w < 768 ? 1 : w < 1024 ? 2 : 3;
+    }
+
+    function maxIdx() {
+        return Math.max(0, total - perView());
+    }
+
+    function buildDots() {
+        dotsContainer.innerHTML = '';
+        dots = [];
+        const count = maxIdx() + 1;
+        for (let i = 0; i < count; i++) {
+            const btn = document.createElement('button');
+            btn.className = 'slider-dot' + (i === current ? ' active' : '');
+            btn.setAttribute('aria-label', 'Go to slide ' + (i + 1));
+            btn.addEventListener('click', () => goTo(i));
+            dotsContainer.appendChild(btn);
+            dots.push(btn);
+        }
+    }
+
+    function goTo(idx) {
+        current = Math.max(0, Math.min(idx, maxIdx()));
+        const cardW = cards[0].offsetWidth + 24;
+        track.style.transform = 'translateX(-' + (current * cardW) + 'px)';
+        prevBtn.disabled = current === 0;
+        nextBtn.disabled = current >= maxIdx();
+        dots.forEach(function (d, i) { d.classList.toggle('active', i === current); });
+    }
+
+    prevBtn.addEventListener('click', function () { goTo(current - 1); });
+    nextBtn.addEventListener('click', function () { goTo(current + 1); });
+
+    let resizeTimer;
+    window.addEventListener('resize', function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(function () {
+            buildDots();
+            goTo(Math.min(current, maxIdx()));
+        }, 100);
+    });
+
+    // Touch / swipe support
+    let touchStartX = 0;
+    track.addEventListener('touchstart', function (e) {
+        touchStartX = e.touches[0].clientX;
+    }, { passive: true });
+    track.addEventListener('touchend', function (e) {
+        const diff = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 40) goTo(current + (diff > 0 ? 1 : -1));
+    });
+
+    buildDots();
+    goTo(0);
+}());
+
 // ===================== COOKIE CONSENT =====================
 (function () {
     const banner = document.getElementById('cookieBanner');

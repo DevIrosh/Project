@@ -802,42 +802,69 @@
                 <h2 class="section-title">Latest <span class="gradient-text">Insights</span></h2>
                 <p class="section-subtitle">Thoughts, guides, and updates from the ZyoraTech team on software, technology, and innovation.</p>
             </div>
-            <div class="insights-grid">
-                <div class="insight-card" data-aos="fade-up" data-aos-delay="100">
-                    <div class="insight-img ii-4">
-                        <span class="insight-category">IT Strategy</span>
-                    </div>
-                    <div class="insight-body">
-                        <span class="insight-date"><i class="far fa-calendar"></i> March 20, 2026</span>
-                        <h3>Why Your Business Needs a Technology Roadmap (And How to Build One)</h3>
-                        <p>Most businesses make technology decisions reactively. A practical framework for building a plan that aligns technology to where your business is going.</p>
-                        <a href="blog/technology-roadmap-2026.html" class="insight-link">Read Article <i class="fas fa-arrow-right"></i></a>
+            <div class="insights-slider-wrap" data-aos="fade-up">
+                <button class="slider-arrow slider-prev" id="insightsPrev" aria-label="Previous articles">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="insights-track-outer">
+                    <div class="insights-track" id="insightsTrack">
+
+                        <div class="insight-card">
+                            <div class="insight-img ii-4">
+                                <span class="insight-category">IT Strategy</span>
+                            </div>
+                            <div class="insight-body">
+                                <span class="insight-date"><i class="far fa-calendar"></i> March 20, 2026</span>
+                                <h3>Why Your Business Needs a Technology Roadmap (And How to Build One)</h3>
+                                <p>Most businesses make technology decisions reactively. A practical framework for building a plan that aligns technology to where your business is going.</p>
+                                <a href="blog/technology-roadmap-2026.html" class="insight-link">Read Article <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="insight-card">
+                            <div class="insight-img ii-1">
+                                <span class="insight-category">AI &amp; Cloud</span>
+                            </div>
+                            <div class="insight-body">
+                                <span class="insight-date"><i class="far fa-calendar"></i> February 18, 2026</span>
+                                <h3>How AI Is Reshaping Custom Software Development in 2026</h3>
+                                <p>Explore how generative AI and intelligent automation are changing the way software is designed, built, and maintained.</p>
+                                <a href="blog/ai-reshaping-software-2026.html" class="insight-link">Read Article <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="insight-card">
+                            <div class="insight-img ii-2">
+                                <span class="insight-category">Web &amp; Mobile</span>
+                            </div>
+                            <div class="insight-body">
+                                <span class="insight-date"><i class="far fa-calendar"></i> January 30, 2026</span>
+                                <h3>5 Key Principles for Building Scalable Mobile Applications</h3>
+                                <p>From architecture decisions to performance optimization — what separates good mobile apps from great ones.</p>
+                                <a href="blog/scalable-mobile-apps.html" class="insight-link">Read Article <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
+                        <div class="insight-card">
+                            <div class="insight-img ii-3">
+                                <span class="insight-category">IT Strategy</span>
+                            </div>
+                            <div class="insight-body">
+                                <span class="insight-date"><i class="far fa-calendar"></i> January 12, 2026</span>
+                                <h3>Digital Transformation: A Practical Roadmap for SMEs</h3>
+                                <p>A practical, step-by-step guide for small and medium enterprises — modernise your operations without disrupting daily workflows.</p>
+                                <a href="blog/digital-transformation-smes.html" class="insight-link">Read Article <i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
-                <div class="insight-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="insight-img ii-1">
-                        <span class="insight-category">AI & Cloud</span>
-                    </div>
-                    <div class="insight-body">
-                        <span class="insight-date"><i class="far fa-calendar"></i> February 18, 2026</span>
-                        <h3>How AI Is Reshaping Custom Software Development in 2026</h3>
-                        <p>Explore how generative AI and intelligent automation are changing the way software is designed, built, and maintained.</p>
-                        <a href="blog/ai-reshaping-software-2026.html" class="insight-link">Read Article <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
-                <div class="insight-card" data-aos="fade-up" data-aos-delay="300">
-                    <div class="insight-img ii-2">
-                        <span class="insight-category">Web & Mobile</span>
-                    </div>
-                    <div class="insight-body">
-                        <span class="insight-date"><i class="far fa-calendar"></i> January 30, 2026</span>
-                        <h3>5 Key Principles for Building Scalable Mobile Applications</h3>
-                        <p>From architecture decisions to performance optimization — what separates good mobile apps from great ones.</p>
-                        <a href="blog/scalable-mobile-apps.html" class="insight-link">Read Article <i class="fas fa-arrow-right"></i></a>
-                    </div>
-                </div>
+                <button class="slider-arrow slider-next" id="insightsNext" aria-label="Next articles">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
             </div>
-            <div style="text-align:center; margin-top:44px;" data-aos="fade-up">
+            <div class="slider-dots" id="insightsDots"></div>
+            <div style="text-align:center; margin-top:40px;">
                 <a href="blog/index.html" class="btn btn-outline">View All Articles &nbsp;&#8594;</a>
             </div>
         </div>

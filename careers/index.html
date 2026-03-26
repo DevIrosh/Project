@@ -10,28 +10,28 @@
     <meta name="robots" content="index, follow, noimageindex">
     <meta name="description" content="Careers at ZyoraTech — Join our team of passionate engineers, designers, and tech innovators. Explore opportunities at ZyoraTech.">
     <title>Careers | ZyoraTech</title>
-    <link rel="canonical" href="https://www.zyoratech.com/careers.html">
+    <link rel="canonical" href="https://www.zyoratech.com/careers/">
     <meta property="og:title" content="Careers | ZyoraTech">
     <meta property="og:description" content="Join our team of passionate engineers, designers, and tech innovators. Explore opportunities at ZyoraTech.">
-    <meta property="og:url" content="https://www.zyoratech.com/careers.html">
+    <meta property="og:url" content="https://www.zyoratech.com/careers/">
     <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary">
     <meta name="twitter:title" content="Careers | ZyoraTech">
     <meta name="twitter:description" content="Join our team of passionate engineers, designers, and tech innovators. Explore opportunities at ZyoraTech.">
-    <link rel="icon" type="image/png" href="brand/Company%20Logo-4K%20.png">
+    <link rel="icon" type="image/png" href="/brand/Company%20Logo-4K%20.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha384-/o6I2CkkWC//PSjvWC/eYN7l3xM3tJm8ZzVkCOfp//W05QcE3mlGskpoHB6XqI+B" crossorigin="anonymous">
     <!-- Shared + Careers CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/careers.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/careers.css">
 </head>
 <body>
 
     <nav class="navbar">
         <div class="inner">
-            <a href="/" class="nav-brand"><img src="brand/Company%20Logo-4K%20.png" alt="ZyoraTech" class="topbar-logo"><span class="zyora">Zyora</span><span class="tech">Tech</span></a>
+            <a href="/" class="nav-brand"><img src="/brand/Company%20Logo-4K%20.png" alt="ZyoraTech" class="topbar-logo"><span class="zyora">Zyora</span><span class="tech">Tech</span></a>
             <a href="/" class="nav-back" rel="noopener noreferrer"><i class="fas fa-arrow-left"></i> Back to Website</a>
         </div>
     </nav>
@@ -161,7 +161,7 @@
                 <form id="cvForm" action="https://formsubmit.co/zyoratech@gmail.com" method="POST" enctype="multipart/form-data">
                     <input type="hidden" name="_subject" value="CV Submission — ZyoraTech Careers">
                     <input type="hidden" name="_template" value="table">
-                    <input type="hidden" name="_next" value="https://www.zyoratech.com/careers.html?cv=sent">
+                    <input type="hidden" name="_next" value="https://www.zyoratech.com/careers/?cv=sent">
                     <!-- Honeypot: bots fill this, humans don't — auto-rejects bot submissions -->
                     <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
 
@@ -215,7 +215,7 @@
 
     <footer class="page-footer">
         <div class="container">
-            <p>&copy; 2026 ZyoraTech. All rights reserved. &nbsp;|&nbsp; <a href="privacy-policy.html" rel="noopener noreferrer">Privacy Policy</a> &nbsp;|&nbsp; <a href="terms.html" rel="noopener noreferrer">Terms of Service</a></p>
+            <p>&copy; 2026 ZyoraTech. All rights reserved. &nbsp;|&nbsp; <a href="/privacy-policy/" rel="noopener noreferrer">Privacy Policy</a> &nbsp;|&nbsp; <a href="/terms/" rel="noopener noreferrer">Terms of Service</a></p>
         </div>
     </footer>
 
@@ -291,7 +291,7 @@
             document.getElementById('cvFormWrap').style.display = 'none';
             document.getElementById('cvSuccess').style.display = 'block';
             // Clean URL without reloading
-            history.replaceState(null, '', window.location.pathname);
+            history.replaceState(null, '', '/careers/');
         }
     </script>
 

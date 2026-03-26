@@ -805,6 +805,22 @@ img {
     margin: 0 auto 10px;
     display: block;
     filter: drop-shadow(0 0 16px rgba(0, 212, 255, 0.4));
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
+    pointer-events: none;
+}
+
+.about-center {
+    position: relative;
+}
+
+.about-center::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    cursor: default;
 }
 
 .about-center p {
@@ -1456,6 +1472,10 @@ img {
     width: auto;
     display: block;
     object-fit: contain;
+    -webkit-user-drag: none;
+    user-select: none;
+    -webkit-user-select: none;
+    pointer-events: none;
 }
 
 .footer-brand p {

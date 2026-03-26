@@ -266,6 +266,12 @@ document.querySelectorAll('img').forEach(img => {
     img.addEventListener('dragstart', e => e.preventDefault());
 });
 
+// Block right-click on logo wrapper areas (covers clicks just outside the img bounds)
+document.querySelectorAll('.nav-brand, .about-center, .footer-brand').forEach(el => {
+    el.addEventListener('contextmenu', e => e.preventDefault());
+    el.addEventListener('dragstart', e => e.preventDefault());
+});
+
 // Re-apply on dynamic content load
 window.addEventListener('load', () => {
     document.querySelectorAll('img').forEach(img => {

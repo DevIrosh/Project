@@ -371,6 +371,48 @@ document.querySelectorAll('.faq-question').forEach(btn => {
     goTo(0);
 }());
 
+// ===================== NEWSLETTER FORM =====================
+(function () {
+    const form = document.getElementById('newsletterForm');
+    const success = document.getElementById('newsletterSuccess');
+    if (!form) return;
+
+    // If already subscribed this session, show success immediately
+    if (localStorage.getItem('zt_newsletter')) {
+        form.style.display = 'none';
+        success.classList.add('show');
+    }
+
+    form.addEventListener('submit', function (e) {
+        e.preventDefault(); // Remove this line when Mailchimp action URL is added
+
+        const emailInput = document.getElementById('newsletterEmail');
+        const email = emailInput.value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+        if (!email || !emailRegex.test(email)) {
+            emailInput.focus();
+            emailInput.style.outline = '2px solid rgba(255,80,80,0.6)';
+            setTimeout(function () { emailInput.style.outline = ''; }, 2000);
+            return;
+        }
+
+        const btn = form.querySelector('.newsletter-btn');
+        btn.disabled = true;
+        btn.textContent = 'Subscribing...';
+
+        // TODO: When Mailchimp is ready:
+        // 1. Remove e.preventDefault() above
+        // 2. Set form action="https://xxx.list-manage.com/subscribe/post?u=...&id=..."
+        // 3. Remove this setTimeout block
+        setTimeout(function () {
+            localStorage.setItem('zt_newsletter', 'subscribed');
+            form.style.display = 'none';
+            success.classList.add('show');
+        }, 600);
+    });
+}());
+
 // ===================== COOKIE CONSENT =====================
 (function () {
     const banner = document.getElementById('cookieBanner');

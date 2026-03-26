@@ -13,18 +13,6 @@
       <stop offset="100%" stop-color="#7b2fff"/>
     </linearGradient>
 
-    <!-- Logo box fill (very subtle) -->
-    <linearGradient id="logoBgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.15"/>
-      <stop offset="100%" stop-color="#7b2fff" stop-opacity="0.15"/>
-    </linearGradient>
-
-    <!-- Logo box border -->
-    <linearGradient id="logoBorder" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00d4ff" stop-opacity="0.55"/>
-      <stop offset="100%" stop-color="#7b2fff" stop-opacity="0.55"/>
-    </linearGradient>
-
     <!-- Heading gradient text -->
     <linearGradient id="headGrad" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" stop-color="#00d4ff"/>
@@ -47,12 +35,6 @@
       <stop offset="0%" stop-color="#7b2fff" stop-opacity="0.16"/>
       <stop offset="100%" stop-color="#7b2fff" stop-opacity="0"/>
     </radialGradient>
-
-    <!-- Logo Z mark gradient — diagonal, matches original logo exactly -->
-    <linearGradient id="logoZGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00d4ff"/>
-      <stop offset="100%" stop-color="#7b2fff"/>
-    </linearGradient>
 
     <!-- Node soft glow filter -->
     <filter id="nodeGlow" x="-50%" y="-50%" width="200%" height="200%">
@@ -102,31 +84,31 @@
     <circle cx="960"  cy="563" r="1.8"/><circle cx="1060" cy="563" r="1.8"/><circle cx="1160" cy="563" r="1.8"/>
   </g>
 
-  <!-- ── ACTUAL COMPANY LOGO (PNG embedded — exact brand asset from brand/ folder) ── -->
-  <image href="../brand/Company%20Logo-4K%20.png"
-         x="52" y="42" width="106" height="113"/>
-
-  <!-- Company name beside logo -->
-  <text x="174" y="97"
+  <!-- ── BRAND HEADER (no logo — typography only) ── -->
+  <!-- "ZyoraTech" wordmark in brand gradient -->
+  <text x="62" y="104"
         font-family="'Space Grotesk', 'Inter', Arial, sans-serif"
-        font-size="33" font-weight="700"
-        fill="white" letter-spacing="-0.5">ZyoraTech</text>
-  <text x="175" y="124"
+        font-size="52" font-weight="700"
+        fill="url(#headGrad)" letter-spacing="-1">ZyoraTech</text>
+  <!-- Gradient accent underbar -->
+  <rect x="62" y="115" width="240" height="4" rx="2" fill="url(#brandGrad)"/>
+  <!-- Tagline label -->
+  <text x="62" y="148"
         font-family="'Inter', Arial, sans-serif"
-        font-size="13.5" font-weight="400"
-        fill="rgba(255,255,255,0.42)" letter-spacing="2.5">CUSTOM SOFTWARE SOLUTIONS</text>
+        font-size="14" font-weight="400"
+        fill="rgba(255,255,255,0.48)" letter-spacing="3.5">CUSTOM SOFTWARE SOLUTIONS</text>
 
   <!-- Horizontal rule under header -->
-  <rect x="60" y="181" width="680" height="1" fill="rgba(255,255,255,0.07)"/>
+  <rect x="62" y="174" width="760" height="1" fill="rgba(255,255,255,0.07)"/>
 
   <!-- ── MAIN HEADLINE ── -->
-  <text x="60" y="268"
+  <text x="62" y="264"
         font-family="'Space Grotesk', 'Inter', Arial, sans-serif"
-        font-size="66" font-weight="700"
+        font-size="70" font-weight="700"
         fill="white" letter-spacing="-1.5">Turning Ideas into</text>
-  <text x="60" y="348"
+  <text x="62" y="350"
         font-family="'Space Grotesk', 'Inter', Arial, sans-serif"
-        font-size="66" font-weight="700"
+        font-size="70" font-weight="700"
         fill="url(#headGrad)" letter-spacing="-1.5">Powerful Software</text>
 
   <!-- ── SUBTITLE ── -->

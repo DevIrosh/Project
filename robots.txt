@@ -2,4 +2,8 @@ User-agent: *
 Allow: /
 Disallow: /brand/
 
+# Block Google Images from indexing the OG banner (social crawlers still allowed)
+User-agent: Googlebot-Image
+Disallow: /images/og-banner.png
+
 Sitemap: https://www.zyoratech.com/sitemap.xml

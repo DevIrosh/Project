@@ -92,8 +92,6 @@
         font-family="'Space Grotesk', 'Inter', Arial, sans-serif"
         font-size="52" font-weight="700"
         fill="url(#headGrad)" letter-spacing="-1">ZyoraTech</text>
-  <!-- Gradient accent underbar -->
-  <rect x="174" y="95" width="220" height="4" rx="2" fill="url(#brandGrad)"/>
   <!-- Tagline label -->
   <text x="175" y="130"
         font-family="'Inter', Arial, sans-serif"

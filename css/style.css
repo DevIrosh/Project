@@ -1466,6 +1466,38 @@ img {
     max-width: 280px;
 }
 
+.footer-contact-info {
+    margin: 12px 0 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.footer-contact-info p {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.footer-contact-info i {
+    color: var(--accent);
+    width: 14px;
+    flex-shrink: 0;
+}
+
+.footer-contact-info a {
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color var(--transition);
+}
+
+.footer-contact-info a:hover {
+    color: var(--accent);
+}
+
 .footer-social {
     display: flex;
     gap: 12px;
